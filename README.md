@@ -1,75 +1,32 @@
-# React + TypeScript + Vite
+# Calorie Tracker - React + TypeScript
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a project built with **React**, **TypeScript**, and **Tailwind CSS**, focused on complex state management using the **useReducer** hook. The application allows users to track consumed calories from food and burned calories from exercise.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Advanced State Management:** Implementation of `useReducer` to centralize the logic for adding, editing, and deleting activities (CRUD).
+- **Data Persistence:** Use of `localStorage` to ensure data is not lost upon page reload.
+- **Real-time Calculations:** Net calorie balance (Consumed vs. Burned) using `useMemo` for performance optimization.
+- **Strict Typing:** Fully developed with **TypeScript** to ensure data integrity and ease of maintenance.
+- **Responsive Design:** Modern and adaptable interface built with **Tailwind CSS**.
 
-## React Compiler
+## 🛠️ Tech Stack
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- **React 18**
+- **TypeScript**
+- **Vite** (Build Tool)
+- **Tailwind CSS** (Styling)
+- **Heroicons**
 
-Note: This will impact Vite dev & build performances.
+## 🧠 Key Learnings
 
-## Expanding the ESLint configuration
+This project was fundamental for mastering:
+1. Data flow with **Reducers** (Actions, Payload, State).
+2. The difference between `useState` and `useReducer` in scalable applications.
+3. The use of ternary operators and array methods like `.reduce()` and `.map()` for business logic.
+4. Typing events and props in React components.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
+Project built as part of my journey to becoming a **Fullstack Developer**.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+[Live Demo on Vercel](https://calorie-tracker-tiagodev1.vercel.app)
